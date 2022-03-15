@@ -5,9 +5,8 @@ import sys
 from HomeTask4 import calc_salary
 print(sys.argv)
 
-try:
-    script, hours, money_per_hour, bonus = sys.argv
-except ValueError:
-    print("Invalid args")
-    exit()
-print(f"{calс_salary(hours, money_per_hour, bonus)}")
+_, hours, money_per_hour, bonus = sys.argv
+
+salary = ((float(hours) * float(money_per_hour)) + float(bonus))
+
+print(f"Заработная плата = {salary}")
